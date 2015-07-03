@@ -1,0 +1,21 @@
+body {
+	font-family: arial;
+}
+h1, h2, p , li {
+	color:black;
+}
+
+a {
+	color:blue;
+}
+
+p {
+	color:black;
+	padding: 10px 10px;
+}
+
+ .jumbotron{
+	background: url("../Design/iggyTest.jpg");
+	background-size: cover;
+	height: 100%;
+}
