@@ -1,0 +1,46 @@
+body {
+	-webkit-background-size: cover; /*Used by Safari &amp; Chrome*/
+	-moz-background-size: cover; /* Used by Firefox */
+	-o-background-size: cover; /* Used by Opera */
+	background-size: cover; /* All Modern Browsers */
+}
+
+.navbar-text {
+    color: white; 
+    text-decoration: none;
+}
+
+a {
+    color:#ff6600;
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    font-family: 'Muli', sans-serif;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+.jumbotron {
+    padding-bottom:15px;
+    color:#333;
+}
+
+h1 a { 
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:48px;
+    color:#666;
+}
+
+h1 a:hover {
+    color:#ff6600;
+    text-decoration:none;
+}
+
+p {
+    color:#333;
+    font-family: 'Muli', sans-serif;
+    margin-bottom: 15px;
+}

@@ -6,52 +6,140 @@
   	
   	<meta charset="utf-8">
 	<title>Find Iggy</title>
+	<style>
+		body  {
+    		background-image: url("Design/concert.gif");
+    		background-color: #cccccc;
+		}
+	</style>
+
+	<script src='jquery-2.1.3.js'></script>
+	<script src='menu.js'></script>
 
 	<!--BootStrap references!!!-->
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">        
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-	<!-- my css -->
-	<link href="Design/style.css" rel="stylesheet" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  	<script src='jquery-2.1.3.js'></script>
 
+	<!--Cool fonts and images-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+	<!-- my css -->
+	<link href="Design/style1.css" rel="stylesheet" />
 </head>
 
 <body>
-	
-	<!--BootStrap references!!!-->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script src='jquery-2.1.3.js'></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-	<div id="div1"/>
-    <div id="div2"/> 
-    <div id="div3"/>
+	<!-- songs and music -->
+	<audio src="Sound/splash.mp3" autoplay="true">Sorry, your browser does not support the audio element.</audio>
+	<audio src="Sound/crowd.mp3" autoplay="true" loop="true">Sorry, your browser does not support the audio element.</audio>
+	<audio src="Sound/leaveit.mp3" autoplay="true" loop="true">Sorry, your browser does not support the audio element.</audio>
 
-    <!-- Text and Explanations -->
-	<div class="jumbotron">
-		<center>
-		<div class="container">
-  		<h1>Find Iggy</h1>
-  		 <p class="text-danger"> Find Iggy was based on find the invisible cow : <a href="http://www.findtheinvisiblecow.com/"> http://www.findtheinvisiblecow.com/</a></p> 
-  		<p> It was made just for fun by Marianne Linhares and Paulo Vinicius Soares in order to learn a bit of web development, <kbd>have fun!</kbd> </p>
- 		<strong> <p> Make sure the volume of your PC it's on, headphones make it a better experience <span class="glyphicon glyphicon-headphones"></span> </p> </strong>
-		</div>
-		</center>
-	</div>
+	<!-- Facebook share -->
+	<script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : 'your-app-id',
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+      };
 
-    <!-- Buttons :) -->
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <!-- Text and Explanations abd Buttons-->
 	<div class="container">
-	<center>
-	<div class="btn-group btn-group-md">
+		<div class="jumbotron text-center">
+  		<h1>Find Iggy</h1>
+  		 	<p> Find Iggy was based on find the invisible cow : <a href="http://www.findtheinvisiblecow.com/"> http://www.findtheinvisiblecow.com/</a></p> 
+  			<p> It was made <kbd>just for fun</kbd> by Marianne Linhares and Paulo Vinicius Soares in order to learn a bit of web development,  have fun! </p>
+ 			<strong> <p> Make sure the volume of your PC it's on, headphones make it a better experience <span class="glyphicon glyphicon-headphones"></span> </p> </strong>
+		
+	  	<a href="#contact" class="btn btn-info" role="button" data-toggle="modal">Contact us</a>
+	  	<a href="game.html" class="btn btn-danger" role="button">Play</a>
+		</div>
+	</div>
 	
-	  <button type="button" class="btn btn-info">Contact us</button>
-	  <a href="game.html" class="btn btn-danger" role="button">Play</a>
-	  <a href="#" class="btn btn-success" role= "button"><span class="glyphicon glyphicon-heart"></span> Share</a>
+	<!-- Footer share-->
+	<div class="navbar navbar-fixed-bottom" role="navigation">
+		<div class="container">
+			<div class="navbar-text pull-left">
+				<cp>&#169 PapapumProject</cp>
+			</div>
+			<div class="navbar-text pull-right">
+	  			<cp><span class="glyphicon glyphicon-heart"></span> Share</cp>
+				<a  class="btn btn-primary" href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+				
+				<!--Twitter share-->
+				<a class="btn btn-info" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdev.twitter.com%2Fweb%2Ftweet-button%3Fsrc%3Dtwitter" data-counturl="https://dev.twitter.com/web/tweet-button" role="button"><i class="fa fa-twitter fa-2x"></i></a>
 
+			</div>
+		</div>
 	</div>
-	</center>
-	</div>
+		
+
+	<!--Modals-->
+	  <div class="modal fade" id="contact" role="dialog">
+    	<div class="modal-dialog">
+    		<div class="modal-content">
+    			<form class="form-horizontal" role="form">
+    				<div class="modal-header">
+    					<h4>Contact<h4>
+	    			</div>
+	    			<div class="modal-body">
+	    				<p>Contact us at papapumproject@gmail.com</p>
+    					<div class="form-group">
+    						<label for="contact-name" class="col-sm-2 control-label">Name</label>
+    						<div class="col-sm-10">
+    							<input type="text" class="form-control" id="contact-name" placeholder="First & Last Name">
+    						</div>
+    					</div>
+    					<div class="form-group">
+    						<label for="contact-email" class="col-sm-2 control-label">Your Email</label>
+    						<div class="col-sm-10">
+    							<input type="email" class="form-control" id="contact-email" placeholder="example@domain.com">
+    						</div>
+    					</div>
+    					<div class="form-group">
+    						<label for="contact-message" class="col-sm-2 control-label">Message</label>
+    						<div class="col-sm-10">
+    							<textarea class="form-control" rows="4"></textarea>
+    						</div>
+    					</div>
+	    			</div>
+	    			<div class="modal-footer">
+    					<a class="btn btn-default" data-dismiss="modal">Close</a>
+    					<button type="submit" class="btn btn-success" id="send">Send</button>
+    				</div>
+    			</form>
+    		</div>
+    	</div>
+    </div>
+
+  
+</div>
 
 </body>
 </html>
