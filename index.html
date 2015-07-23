@@ -38,7 +38,7 @@
 	<!-- songs and music -->
 	<audio src="Resources/Sound/splash.mp3" autoplay="true">Sorry, your browser does not support the audio element.</audio>
 	<audio src="Resources/Sound/crowd.mp3" autoplay="true" loop="true">Sorry, your browser does not support the audio element.</audio>
-	<audio src="Resources/Sound/leaveit.mp3" autoplay="true" loop="true">Sorry, your browser does not support the audio element.</audio>
+	<audio src="Resources/Music/leaveit.mp3" autoplay="true" loop="true">Sorry, your browser does not support the audio element.</audio>
 
 	<!-- Facebook share -->
 	<script>
@@ -58,7 +58,6 @@
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
 	</script>
-
 
     <!-- Text and Explanations abd Buttons-->
 	<div class="container">
@@ -86,11 +85,26 @@
 				<!--Twitter share-->
 				<a class="btn btn-info" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdev.twitter.com%2Fweb%2Ftweet-button%3Fsrc%3Dtwitter" data-counturl="https://dev.twitter.com/web/tweet-button" role="button"><i class="fa fa-twitter fa-2x"></i></a>
 
-				<!-- <iframe src="http://gifyoutube.com/embed/KYQk13" frameborder="0" scrolling="no" width="480" height="270" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe> -->
+			
+						<!-- <iframe src="http://gifyoutube.com/embed/KYQk13" frameborder="0" scrolling="no" width="480" height="270" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe> -->
+						
+Tweet</a>
 
 			</div>
 		</div>
 	</div>
+
+
+	<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.4&appId=1464681003844936";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+
+	<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
 		
 
 	<!--Modals-->
@@ -103,6 +117,7 @@
 	    			</div>
 	    			<div class="modal-body">
 	    				<p>Contact us at papapumproject@gmail.com</p>
+	    				<!--
     					<div class="form-group">
     						<label for="contact-name" class="col-sm-2 control-label">Name</label>
     						<div class="col-sm-10">
@@ -120,11 +135,11 @@
     						<div class="col-sm-10">
     							<textarea class="form-control" rows="4"></textarea>
     						</div>
-    					</div>
+    					</div> -->
 	    			</div>
 	    			<div class="modal-footer">
     					<a class="btn btn-default" data-dismiss="modal">Close</a>
-    					<button type="submit" class="btn btn-success" id="send">Send</button>
+    					<!--<button type="submit" class="btn btn-success" id="send">Send</button> -->
     				</div>
     			</form>
     		</div>
