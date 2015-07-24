@@ -10,6 +10,7 @@ var timeGame;
 
 jQuery(document).ready(function(){
 
+    preprocessVideo.style.visibility='hidden';
     document.getElementById('endMessage').style.visibility='hidden';
     document.getElementById('foundText').style.visibility='hidden';
     document.getElementById('timeText').style.visibility='hidden';
@@ -55,21 +56,9 @@ jQuery(document).ready(function(){
             var volumeSong = 1 - Math.pow(2,Math.log(dist + 10)/Math.LN10)/10.0;
           //  document.write(volumeSong);
             var song = document.getElementById('game_song');
-            var fuckingHot = document.getElementById('isHot');
             song.volume = volumeSong;
-
-            if (dist <= 200){
-                document.getElementById('isHot').play();
-            }
-            else {
-                 $('isHot').currentTime = 0;
-                document.getElementById('isHot').pause();
-
-            }
      }
 })();
-
-
 
   $('#papapum').on('click', function() {
 
@@ -79,7 +68,6 @@ jQuery(document).ready(function(){
         timeGame = end - start;        
         clickedIggy = true;
         document.onmousemove = endGame;
-        document.getElementById('isHot').pause();
         document.getElementById('game_song').src = "#";
 
         $(this).animate({
@@ -88,7 +76,9 @@ jQuery(document).ready(function(){
                 height: '400px',
                 width: '900px'
             },"slow");
-                $('#papapum').append('<video id="video" autoplay width=900 height=400> <source src="Resources/Video/papapum.mp4" type="video/mp4">Your browser does not support the video tag.</video>');
+                $('#papapum').append(preprocessVideo);
+                preprocessVideo.play();
+                preprocessVideo.style.visibility='visible';
       
         }
 
@@ -106,7 +96,7 @@ function endGame()
 function showEndGame()
 {
    
-   setTimeout(function(){document.getElementById('video').style.visibility='hidden';}, 8000);
+   setTimeout(function(){document.getElementById('papapumVideo').style.visibility='hidden';}, 8000);
    setTimeout(function(){document.getElementById('papapum').style.visibility='hidden';}, 8000);
 
    setTimeout(function(){document.getElementById('endMessage').style.visibility='visible';}, 8300);

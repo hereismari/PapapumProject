@@ -27,8 +27,13 @@
 
 	<div>
 		<audio id="game_song" src="Resources/Music/calmFree.mp3" autoplay="true" loop="true">Sorry, your browser does not support the audio element.</audio>
-		<audio id="isHot" src="Resources/Sound/hot.mp3" autoplay="false" loop="false">Sorry, your browser does not support the audio element.</audio>
+		<video preload="auto" id="papapumVideo" width=900 height=400>
+			<source src="Resources/Video/papapum.mp4" type="video/mp4">Sorry, your browser does not support the video element.</video>
 	</div>
+
+	<script>
+		var preprocessVideo = document.getElementById("papapumVideo"); 
+	</script>
 
 	<div class="container" id="endMessage">
 		<div class="jumbotron vertical-center">
