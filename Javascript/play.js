@@ -34,7 +34,7 @@ jQuery(document).ready(function(){
         $newdiv = $('<div id="papapum" style="cursor:pointer" />').css({
             'width': 50 +'px',
             'height': 50 +'px',
-            'background-color': '#666',
+            'background-color': '#222',
             'position':'absolute',
             'left':posx+'px',
             'top':posy+'px',
@@ -55,13 +55,16 @@ jQuery(document).ready(function(){
             var volumeSong = 1 - Math.pow(2,Math.log(dist + 10)/Math.LN10)/10.0;
           //  document.write(volumeSong);
             var song = document.getElementById('game_song');
+            var fuckingHot = document.getElementById('isHot');
             song.volume = volumeSong;
 
             if (dist <= 200){
                 document.getElementById('isHot').play();
             }
             else {
+                 $('isHot').currentTime = 0;
                 document.getElementById('isHot').pause();
+
             }
      }
 })();
@@ -80,7 +83,7 @@ jQuery(document).ready(function(){
         document.getElementById('game_song').src = "#";
 
         $(this).animate({
-                left: (($(document).width())/6).toFixed(),
+                left: (($(document).width())/8).toFixed(),
                 top: (($(document).height())/20).toFixed(),
                 height: '400px',
                 width: '900px'
@@ -120,5 +123,10 @@ function showEndGame()
 
    document.getElementById('btn_twitter').href = "http://twitter.com/share?text=I've found iggy in " + timeGame/1000 + " seconds!&url=http://www.findiggy.hol.es&hashtags=FindIggy"
    setTimeout(function(){document.getElementById('btn_twitter').style.visibility='visible';}, 10300);
+   setTimeout(function()
+        {
+            document.getElementById('game_song').src="Resources/Sound/master.mp3"; 
+            $('#game_song').animate({volume:0.5},5000);
+        }, 10300);
   
 }
