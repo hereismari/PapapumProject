@@ -39,10 +39,11 @@ jQuery(document).ready(function(){
             'position':'absolute',
             'left':posx+'px',
             'top':posy+'px',
-            'display':'none'
+            'display':'none',
+            'visible' : 'false'
         });
         
-        $newdiv.appendTo('body').fadeIn(100); 
+        $newdiv.appendTo('body').fadeIn(5000); 
 
     })();
 
