@@ -41,25 +41,18 @@
 	<audio src="Resources/Music/leaveit.mp3" autoplay="true" loop="true">Sorry, your browser does not support the audio element.</audio>
 
 	<!-- Facebook share -->
-	<script>
-		  window.fbAsyncInit = function() {
-		    FB.init({
-		      appId      : '1464681003844936',
-		      xfbml      : true,
-		      version    : 'v2.3'
-		    });
-		  };
+	<div id="fb-root"></div>
+		<script>
+			  (function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=1464681003844936";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
 
-		  (function(d, s, id){
-		     var js, fjs = d.getElementsByTagName(s)[0];
-		     if (d.getElementById(id)) {return;}
-		     js = d.createElement(s); js.id = id;
-		     js.src = "//connect.facebook.net/en_US/sdk.js";
-		     fjs.parentNode.insertBefore(js, fjs);
-		   }(document, 'script', 'facebook-jssdk'));
-	</script>
-
-    <!-- Text and Explanations abd Buttons-->
+    <!-- Text and Explanations and Buttons-->
 	<div class="container">
 		<div class="jumbotron text-center">
   		<h1>Find Iggy</h1>
@@ -67,7 +60,7 @@
   			<p> It was made <kbd>just for fun</kbd> by Marianne Linhares and Paulo Vinicius Soares in order to learn a bit of web development,  have fun! </p>
  			<strong> <p> Make sure the volume of your PC it's on, headphones make it a better experience <span class="glyphicon glyphicon-headphones"></span> </p> </strong>
 		
-	  	<a href="#contact" class="btn btn-info" role="button" data-toggle="modal">Contact us</a>
+	  	<a href="#contact" class="btn btn-primary" role="button" data-toggle="modal">Contact us</a>
 	  	<a href="game.html" class="btn btn-danger" role="button">Play</a>
 		</div>
 	</div>
@@ -80,32 +73,16 @@
 			</div>
 			<div class="navbar-text pull-right">
 	  			<cp><span class="glyphicon glyphicon-heart"></span> Share</cp>
-				<a  class="btn btn-primary" href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
 				
-				<!--Twitter share-->
-				<a class="btn btn-info" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdev.twitter.com%2Fweb%2Ftweet-button%3Fsrc%3Dtwitter" data-counturl="https://dev.twitter.com/web/tweet-button" role="button"><i class="fa fa-twitter fa-2x"></i></a>
 
-			
-						<!-- <iframe src="http://gifyoutube.com/embed/KYQk13" frameborder="0" scrolling="no" width="480" height="270" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe> -->
-						
-Tweet</a>
-
+				<!--Facebook share -->
+				<a  id="btn_fb" class="btn btn-transparent" href="http://www.facebook.com/sharer/sharer.php?u=www.findiggy.hol.es" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" target="_blank" ><i class="fa fa-facebook-square fa-2x"></i></a>
+				<!--Twitter share -->
+				<a  id="btn_twitter" class="btn btn-transparent" href="http://twitter.com/share?&url=http://www.findiggy.hol.es&hashtags=FindIggy" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')" target="_blank" ><i class="fa fa-twitter fa-2x" data-hashtags="FindIggy"></i></a>
+	
 			</div>
 		</div>
 	</div>
-
-
-	<div id="fb-root"></div>
-				<script>(function(d, s, id) {
-				  var js, fjs = d.getElementsByTagName(s)[0];
-				  if (d.getElementById(id)) return;
-				  js = d.createElement(s); js.id = id;
-				  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.4&appId=1464681003844936";
-				  fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));</script>
-
-	<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
-		
 
 	<!--Modals-->
 	  <div class="modal fade" id="contact" role="dialog">
@@ -117,25 +94,6 @@ Tweet</a>
 	    			</div>
 	    			<div class="modal-body">
 	    				<p>Contact us at papapumproject@gmail.com</p>
-	    				<!--
-    					<div class="form-group">
-    						<label for="contact-name" class="col-sm-2 control-label">Name</label>
-    						<div class="col-sm-10">
-    							<input type="text" class="form-control" id="contact-name" placeholder="First & Last Name">
-    						</div>
-    					</div>
-    					<div class="form-group">
-    						<label for="contact-email" class="col-sm-2 control-label">Your Email</label>
-    						<div class="col-sm-10">
-    							<input type="email" class="form-control" id="contact-email" placeholder="example@domain.com">
-    						</div>
-    					</div>
-    					<div class="form-group">
-    						<label for="contact-message" class="col-sm-2 control-label">Message</label>
-    						<div class="col-sm-10">
-    							<textarea class="form-control" rows="4"></textarea>
-    						</div>
-    					</div> -->
 	    			</div>
 	    			<div class="modal-footer">
     					<a class="btn btn-default" data-dismiss="modal">Close</a>

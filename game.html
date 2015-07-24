@@ -3,15 +3,56 @@
 <html>
 
 <head>
+
 	<script src='Javascript/jquery-2.1.3.js'></script>
 	<script src='Javascript/play.js'></script>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+ 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">        
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  	<script src='jquery-2.1.3.js'></script>
+
+	<!--Cool fonts and images-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href="Design/style2.css" rel="stylesheet" />
 </head>
 
 <body>
 
 	<div>
 		<audio id="game_song" src="Resources/Music/calmFree.mp3" autoplay="true" loop="true">Sorry, your browser does not support the audio element.</audio>
+		<audio id="isHot" src="Resources/Sound/hot.mp3" autoplay="false" loop="false">Sorry, your browser does not support the audio element.</audio>
+	</div>
+
+	<div class="container" id="endMessage">
+		<div class="jumbotron vertical-center">
+  		<h1 id="foundText">You've Found Iggy!!!</h1>
+  			<p id="timeText">Time: </p>
+  			<p><a id="playAgain" class="btn btn-danger" href="http://www.findiggy.hol.es/game.html" role="button">Play Again!</a></p>
+
+  			<div class="navbar navbar-fixed-bottom" role="navigation">
+		<div class="container">
+			<div class="navbar-text pull-left">
+				<cp id="papapumLogo">&#169 PapapumProject</cp>
+			</div>
+			<div class="navbar-text pull-right">
+	  			<cp id="shareText"><span class="glyphicon glyphicon-heart"></span> Share</cp>
+			
+				<!--Facebook share -->
+				<a  id="btn_fb" class="btn btn-transparent" href="http://www.facebook.com/sharer/sharer.php?u=www.findiggy.hol.es/game.html" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" target="_blank" ><i class="fa fa-facebook-square fa-2x"></i></a>
+				<!--Twitter share -->
+				<a  id="btn_twitter" class="btn btn-transparent" href="http://twitter.com/share?text=teste&url=http://www.findiggy.hol.es&hashtags=FindIggy" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')" target="_blank" ><i class="fa fa-twitter fa-2x" data-hashtags="FindIggy"></i></a>
+			</div>
+		</div>
+	</div>
+
+		</div>
 	</div>
 
 </body>

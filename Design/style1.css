@@ -1,3 +1,35 @@
+
+#btn_fb {
+    color:#ffffff;
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    font-family: 'Muli', sans-serif;
+}
+
+#btn_twitter {
+    color:#ffffff;
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    font-family: 'Muli', sans-serif;
+}
+
+#btn_fb:hover {
+    color:#000000;
+    text-decoration:underline;
+}
+#btn_twitter:hover {
+    color:#000000;
+    text-decoration:underline;
+}
+
+.btn {
+    color:#000000;
+}
+
 body {
 	-webkit-background-size: cover; /*Used by Safari &amp; Chrome*/
 	-moz-background-size: cover; /* Used by Firefox */
@@ -28,6 +60,10 @@ a:hover {
     color:#333;
 }
 
+h1 {
+    color:#000000;
+}
+
 h1 a { 
     font-family: 'Open Sans Condensed', sans-serif;
     font-size:48px;
@@ -43,4 +79,8 @@ p {
     color:#333;
     font-family: 'Muli', sans-serif;
     margin-bottom: 15px;
+}
+
+span {
+    color: red;
 }

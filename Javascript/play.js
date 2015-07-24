@@ -1,21 +1,40 @@
+
 var posx;
 var posy;
 
-var on;
+var clickedIggy;
 
-$(document).ready(function(){
+var start;
+var end;
+var timeGame;
 
-    on = true;
+jQuery(document).ready(function(){
 
+    document.getElementById('endMessage').style.visibility='hidden';
+    document.getElementById('foundText').style.visibility='hidden';
+    document.getElementById('timeText').style.visibility='hidden';
+    document.getElementById('playAgain').style.visibility='hidden';
+    document.getElementById('papapumLogo').style.visibility='hidden';
+    document.getElementById('btn_fb').style.visibility='hidden';
+    document.getElementById('btn_twitter').style.visibility='hidden';
+    document.getElementById('shareText').style.visibility='hidden';
+
+    clickedIggy = false;
     posx = (Math.random() * ($(document).width() - 10)).toFixed();
     posy = (Math.random() * ($(document).height() - 10)).toFixed();
+    var songs = ["Resources/Music/calmFree.mp3","Resources/Music/live.mp3","Resources/Music/1xtra.mp3"];
+    var index = Math.floor(Math.random() * 3) + 0;
+    document.getElementById("game_song").src = songs[index];
+
+    start = new Date().getTime();
+    end = new Date().getTime();
 
     (function makeDiv(){
 
         $newdiv = $('<div id="papapum" style="cursor:pointer" />').css({
             'width': 50 +'px',
             'height': 50 +'px',
-            'background-color': '#ffffff',
+            'background-color': '#666',
             'position':'absolute',
             'left':posx+'px',
             'top':posy+'px',
@@ -26,24 +45,9 @@ $(document).ready(function(){
 
     })();
 
-  $('#papapum').on('click', function() {
-
-    $("game_song").volume = 0;
-    $(this).animate({
-            left: (($(document).height())/4).toFixed(),
-            top: (($(document).height())/20).toFixed(),
-            height: '400px',
-            width: '900px'
-        },"slow");
-            $('#papapum').append('<video autoplay width=900 height=400> <source src="Resources/Video/papapum.mp4" type="video/mp4">Your browser does not support the video tag.</video>');
-  });
-
-});
-
-(function() {
+    (function() {
     document.onmousemove = setSound;
     function setSound(event) {
-        //if(on == false){
             var e = window.event;
             var mousex = e.clientX;
             var mousey = e.clientY;
@@ -53,14 +57,68 @@ $(document).ready(function(){
             var song = document.getElementById('game_song');
             song.volume = volumeSong;
 
-         //   if(dist >= 750 &&  song.src != "file:///home/dell/PapapumProject/Resources/Music/calmFree.mp3"){
-         //       song.src="Resources/Sound/calmFree.mp3";
-         //   }
-         //   else if (dist >= 300){
-         //        song.src="Resources/Sound/when.mp3";
-         //   }
-         //   else
-         //      song.src="Resources/Sound/live.mp3";
-
-    }
+            if (dist <= 200){
+                document.getElementById('isHot').play();
+            }
+            else {
+                document.getElementById('isHot').pause();
+            }
+     }
 })();
+
+
+
+  $('#papapum').on('click', function() {
+
+    if(!clickedIggy){
+        
+        end = new Date().getTime();
+        timeGame = end - start;        
+        clickedIggy = true;
+        document.onmousemove = endGame;
+        document.getElementById('isHot').pause();
+        document.getElementById('game_song').src = "#";
+
+        $(this).animate({
+                left: (($(document).width())/6).toFixed(),
+                top: (($(document).height())/20).toFixed(),
+                height: '400px',
+                width: '900px'
+            },"slow");
+                $('#papapum').append('<video id="video" autoplay width=900 height=400> <source src="Resources/Video/papapum.mp4" type="video/mp4">Your browser does not support the video tag.</video>');
+      
+        }
+
+        showEndGame();
+
+  });
+
+});
+
+function endGame()
+{
+    
+}
+
+function showEndGame()
+{
+   
+   setTimeout(function(){document.getElementById('video').style.visibility='hidden';}, 8000);
+   setTimeout(function(){document.getElementById('papapum').style.visibility='hidden';}, 8000);
+
+   setTimeout(function(){document.getElementById('endMessage').style.visibility='visible';}, 8300);
+   setTimeout(function(){document.getElementById('foundText').style.visibility='visible';}, 8600);
+
+   document.getElementById('timeText').innerHTML = "Time: " + timeGame/1000 + ' seconds';
+   setTimeout(function(){document.getElementById('timeText').style.visibility='visible';}, 9000);
+
+   setTimeout(function(){document.getElementById('playAgain').style.visibility='visible';}, 9500);
+
+   setTimeout(function(){document.getElementById('papapumLogo').style.visibility='visible';}, 9700);
+   setTimeout(function(){document.getElementById('shareText').style.visibility='visible';}, 9900);
+   setTimeout(function(){document.getElementById('btn_fb').style.visibility='visible';}, 10100);
+
+   document.getElementById('btn_twitter').href = "http://twitter.com/share?text=I've found iggy in " + timeGame/1000 + " seconds!&url=http://www.findiggy.hol.es&hashtags=FindIggy"
+   setTimeout(function(){document.getElementById('btn_twitter').style.visibility='visible';}, 10300);
+  
+}
