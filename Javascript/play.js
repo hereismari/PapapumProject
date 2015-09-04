@@ -89,11 +89,7 @@ jQuery(document).ready(function(){
 
 });
 
-function endGame()
-{
-    
-}
-
+function endGame() {}
 function showEndGame()
 {
    
