@@ -8,7 +8,7 @@ var start;
 var end;
 var timeGame;
 
-jQuery(document).ready(function(){
+jQuery(document).ready(function() {
 
     preprocessVideo.style.visibility='hidden';
     document.getElementById('endMessage').style.visibility='hidden';

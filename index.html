@@ -5,12 +5,6 @@
 <head>  	
   	<meta charset="utf-8">
 	<title>Find Iggy</title>
-	<style>
-		body  {
-    		background-image: url("Resources/Image/concert.gif");
-    		background-color: #cccccc;
-		}
-	</style>
 
 	<script src='Javascript/jquery-2.1.3.js'></script>
 	<script src='Javascript/menu.js'></script>
@@ -30,7 +24,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 	<!-- my css -->
-	<link href="Design/style1.css" rel="stylesheet" />
+	<link href="Design/style_index.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -40,15 +34,15 @@
 	<audio src="Resources/Sound/crowd.mp3" autoplay="true" loop="true">Sorry, your browser does not support the audio element.</audio>
 	<audio src="Resources/Music/leaveit.mp3" autoplay="true" loop="true">Sorry, your browser does not support the audio element.</audio>
 
-    <!-- Text,Explanations and Buttons-->
+    <!-- Text, Explanations and Buttons-->
 	<div class="container">
 		<div class="jumbotron text-center">
-  		<h1>Find Iggy</h1>
-			<p style="font-size:16px"> Find Iggy was based on find the invisible cow : <a href="http://www.findtheinvisiblecow.com/"> http://www.findtheinvisiblecow.com/</a></p>
-  			<p style="font-size:18px"> It was created <kbd>just for fun</kbd> in order to learn a bit of web development, have fun! </p>
- 			<strong> <p>Make it a better experience:</p></strong> 
- 				<p style="color:#111"><span class="glyphicon glyphicon-time"></span> Wait a while...so images,sounds and videos are loaded.</p>
- 				<p style="color:#111"><span class="glyphicon glyphicon-headphones"></span> Headphones are helpful to find Iggy!</p>
+  			<h1>Find Iggy</h1>
+			<h4>Find Iggy was based on find the invisible cow: <a href="http://www.findtheinvisiblecow.com/"> http://www.findtheinvisiblecow.com/</a></h4>
+  			<h4 style="font-size:18px">It was created <kbd>just for fun</kbd> in order to learn a bit of web development, have fun! </h4>
+ 			<p><strong>Make it a better experience:</strong></p> 
+ 				<p class="tip"><span class="glyphicon glyphicon-time"></span> Wait a while...so images,sounds and videos are loaded.</p>
+ 				<p class="tip"><span class="glyphicon glyphicon-headphones"></span> Headphones are helpful to find Iggy!</p>
  		
 	  	<a href="#contact" class="btn btn-primary" role="button" data-toggle="modal">Contact us</a>
 	  	<a href="game.html" class="btn btn-danger" role="button">Play</a>
@@ -102,7 +96,7 @@
 	    			</div>
 	    			<div class="modal-body">
 	    				<p>1.Iggy is hidden somewhere, you'll have to find her using the mouse!<p>
-	    				<p>2.The music gets lowder if you're closer to Iggy.<p>
+	    				<p>2.The music gets louder if you're closer to Iggy and lower otherwise.<p>
 	    				<p>3.Good Luck!</p>
 	    			</div>
 	    			<div class="modal-footer">

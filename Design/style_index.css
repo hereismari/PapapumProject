@@ -121,6 +121,9 @@ body {
 	-moz-background-size: cover; /* Used by Firefox */
 	-o-background-size: cover; /* Used by Opera */
 	background-size: cover; /* All Modern Browsers */
+
+  background-image: url("../Resources/Image/concert.gif");
+  background-color: #cccccc;
 }
 
 .navbar-text {
@@ -165,8 +168,13 @@ p {
     color:#333;
     font-family: 'Muli', sans-serif;
     margin-bottom: 15px;
+    font-size: 0.2em;
 }
 
 span {
     color: red;
+}
+
+.tip {
+    color: #111;
 }
